@@ -1,0 +1,66 @@
+
+// -CORES-
+$primary-color:   #f3f3f3;
+$secundary-color: #ffffff;
+$buttons-color:   #0095f6;
+
+
+// CONFIG BASE 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+a {text-decoration: none;}
+
+
+// GENERAL CLASSES
+.primary-button {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $buttons-color;
+    color: $secundary-color;
+}
+
+.tertiary-button {
+    color: $buttons-color;
+}
+
+.flex-center {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// MIXINS
+@mixin flex-mix($jc) {
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+// MEDIA QUERIE 
+@media(max-width: 1024px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+@media(max-width: 650px) {
+    .phone-image {display: none;}
+
+    .log {
+        width: 100%;
+    }
+
+    .login-logout {
+        border: none;
+        background-color: $primary-color;
+    }
+}
